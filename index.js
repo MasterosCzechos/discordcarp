@@ -35,7 +35,7 @@ bot.on('message', async message => {
             message.channel.send(Em);
         }
     }
-    //REACTION ON BAD WORD
+//REACTION ON BAD WORD
     bad = ['piča', 'kokot', 'píča','debil','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak'];
     if (bad.indexOf(message.content) >= 0) {
         message.react('🤬');
