@@ -37,7 +37,7 @@ bot.on('message', async message => {
     }
     //REACTION ON BAD WORD
     bad = ['piča', 'kokot'];
-    if (message.content.toLocaleLowerCase().includes === bad) {
+    if (message.content.toLocaleLowerCase().includes(bad)) {
         message.react('826140093601415208');
     }
 //CARP
