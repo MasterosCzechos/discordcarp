@@ -45,19 +45,19 @@ bot.on('message', async message => {
     if(ja>bot){
         const Em = new MessageEmbed()
         .addFields(
-            {name: 'Vyhrál jsi!' ,value: `<@${message.author.id}> Hodil ${ja}.. a Masteros pouze ${bot}` },)
+            {name: 'Vyhrál jsi!' ,value: `<@${message.author.id}> Hodil ${ja}.. a CA-RP pouze ${bot}` },)
         .setColor(0xFFB600)
         message.channel.send(Em);
         }else if(ja<bot){
         const Em = new MessageEmbed()
         .addFields(
-            {name: 'Prohrál jsi!' ,value: `<@${message.author.id}> Hodil pouze ${ja}.. a Masteros ${bot}` },)
+            {name: 'Prohrál jsi!' ,value: `<@${message.author.id}> Hodil pouze ${ja}.. a CA-RP ${bot}` },)
         .setColor(0xFF0000)
         message.channel.send(Em);
         }else{
         const Em = new MessageEmbed()
         .addFields(
-            {name: 'Vítězové jste oba!' ,value: `<@${message.author.id}> Hodil ${ja}.. a Masteros též ${bot}` },)
+            {name: 'Vítězové jste oba!' ,value: `<@${message.author.id}> Hodil ${ja}.. a CA-RP též ${bot}` },)
         .setColor(0xFF00EC)
              
         message.channel.send(Em);
