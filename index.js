@@ -35,7 +35,11 @@ bot.on('message', async message => {
             message.channel.send(Em);
         }
     }
-
+    //REACTION ON BAD WORD
+    bad = ['piča', 'kokot'];
+    if (message.content.toLocaleLowerCase().includes === bad) {
+        message.react('826140093601415208');
+    }
 //CARP
 //KOSTKA
     if (message.content.includes ('kostka')){
