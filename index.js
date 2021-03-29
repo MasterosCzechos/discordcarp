@@ -1,4 +1,4 @@
-const { Client, Message, MessageEmbed, MessageMentions, MessageAttachment,} = require('discord.js');
+const { MessageEmbed, MessageAttachment,} = require('discord.js');
 const bot = new Discord.Client();
 
 bot.once('ready', () => {
