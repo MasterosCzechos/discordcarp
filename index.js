@@ -40,24 +40,24 @@ bot.on('message', async message => {
 //CARP
 //KOSTKA
     if (message.content.includes ('kostka')){
-    bot=Math.floor(Math.random() * 6) + (1);
+    bott =Math.floor(Math.random() * 6) + (1);
     ja=Math.floor(Math.random() * 6) + (1);
     if(ja>bot){
         const Em = new MessageEmbed()
         .addFields(
-            {name: 'Vyhrál jsi!' ,value: `<@${message.author.id}> Hodil ${ja}.. a CA-RP pouze ${bot}` },)
+            {name: 'Vyhrál jsi!' ,value: `<@${message.author.id}> Hodil ${ja}.. a CA-RP pouze ${bott}` },)
         .setColor(0xFFB600)
         message.channel.send(Em);
         }else if(ja<bot){
         const Em = new MessageEmbed()
         .addFields(
-            {name: 'Prohrál jsi!' ,value: `<@${message.author.id}> Hodil pouze ${ja}.. a CA-RP ${bot}` },)
+            {name: 'Prohrál jsi!' ,value: `<@${message.author.id}> Hodil pouze ${ja}.. a CA-RP ${bott}` },)
         .setColor(0xFF0000)
         message.channel.send(Em);
         }else{
         const Em = new MessageEmbed()
         .addFields(
-            {name: 'Vítězové jste oba!' ,value: `<@${message.author.id}> Hodil ${ja}.. a CA-RP též ${bot}` },)
+            {name: 'Vítězové jste oba!' ,value: `<@${message.author.id}> Hodil ${ja}.. a CA-RP též ${bott}` },)
         .setColor(0xFF00EC)
              
         message.channel.send(Em);
