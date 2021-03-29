@@ -36,8 +36,8 @@ bot.on('message', async message => {
         }
     }
     //REACTION ON BAD WORD
-    //bad = ['piča', 'kokot'];
-    if (message.content==='piča') {
+    bad = ['piča', 'kokot'];
+    if (bad.indexOf(message.content) >= 0) {
         message.react('😄');
     }
 //CARP
