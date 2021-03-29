@@ -38,8 +38,7 @@ bot.on('message', async message => {
     //REACTION ON BAD WORD
     bad = ['piča', 'kokot'];
     if (bad.indexOf(message.content) >= 0) {
-        reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'face_with_symbols_over_mouth');
-	    message.react(reactionEmoji);
+        message.react('🤬');
     }
 //CARP
 //KOSTKA
