@@ -7,7 +7,6 @@ bot.once('ready', () => {
 
 bot.on('message', async message => {
 //NASTAVENÍ
-    bot.user.setUsername('CA-RP');
     bot.user.setActivity('co meleš..', { type: 'LISTENING' });
 
 //PENIS    
