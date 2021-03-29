@@ -42,13 +42,13 @@ bot.on('message', async message => {
     if (message.content.includes ('kostka')){
     bott =Math.floor(Math.random() * 6) + (1);
     ja=Math.floor(Math.random() * 6) + (1);
-    if(ja>bot){
+    if(ja>bott){
         const Em = new MessageEmbed()
         .addFields(
             {name: 'Vyhrál jsi!' ,value: `<@${message.author.id}> Hodil ${ja}.. a CA-RP pouze ${bott}` },)
         .setColor(0xFFB600)
         message.channel.send(Em);
-        }else if(ja<bot){
+        }else if(ja<bott){
         const Em = new MessageEmbed()
         .addFields(
             {name: 'Prohrál jsi!' ,value: `<@${message.author.id}> Hodil pouze ${ja}.. a CA-RP ${bott}` },)
