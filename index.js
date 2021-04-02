@@ -105,7 +105,7 @@ bot.on('message', async message => {
         .setThumbnail('attachment://arnold.png');
         message.channel.send(Em);
     }
-    if (message.content.toLocaleLowerCase().includes (`<@${message.member.id('267413057595113473')}>`)) {
+    /*if (message.content.toLocaleLowerCase().includes (`<@${message.member.id('267413057595113473')}>`)) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
         .addFields(
@@ -115,7 +115,7 @@ bot.on('message', async message => {
         .attachFiles(['ted.png'])
         .setThumbnail('attachment://ted.png');
         message.channel.send(Em);
-    }
+    }*/
     if (message.content.toLocaleLowerCase().includes ('grogy')) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
