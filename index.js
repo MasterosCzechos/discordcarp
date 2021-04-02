@@ -36,7 +36,7 @@ bot.on('message', async message => {
         }
     }
 //REACTION ON BAD WORD
-    bad = ['píči','piča', 'kokot', 'píča','debil','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak'];
+    bad = ['pico','píči','piča', 'kokot', 'píča','debil','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak'];
     if (bad.indexOf(message.content) >= 0) {
         message.react('🤬');
         message.react('827604658729517076');
