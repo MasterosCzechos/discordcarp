@@ -54,8 +54,8 @@ bot.on('message', async message => {
             {name: `!penis`, value: 'Změř si svého macka ;)' },
         )
         .setColor(0xCF3C1D)
-        .attachFiles(['rythm.png'])
-        .setThumbnail('attachment://rythm.png');
+        .attachFiles(['carp-logo.png'])
+        .setThumbnail('attachment://carp-logo.png');
         message.channel.send(Em);
     }
 
