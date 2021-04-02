@@ -105,6 +105,17 @@ bot.on('message', async message => {
         .setThumbnail('attachment://arnold.png');
         message.channel.send(Em);
     }
+    if (message.content.toLocaleLowerCase().includes (`<@${message.author.id('267413057595113473')}>`)) {
+        const Em = new MessageEmbed()
+        .setTitle(`Neotravuj..`)
+        .addFields(
+            {name: `Tedík`, value: `Neotravuj má dost práce.. CSGO je hard hra ;)` },
+        )
+        .setColor(0x000000)
+        .attachFiles(['ted.png'])
+        .setThumbnail('attachment://ted.png');
+        message.channel.send(Em);
+    }
     if (message.content.toLocaleLowerCase().includes ('grogy')) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
