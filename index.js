@@ -10,7 +10,7 @@ bot.on('message', async message => {
     bot.user.setActivity('co meleš..', { type: 'LISTENING' });
 
 //PENIS    
-    if (message.content.includes ('penis')){
+    if (message.content.includes ('!penis')){
         j=Math.floor(Math.random() * 29) + (4);
         if(j<=8){
         const Em = new MessageEmbed()
@@ -46,7 +46,20 @@ bot.on('message', async message => {
 
 //CARP
 //KOSTKA
-    if (message.content.includes ('kostka')){
+    if (message.content.startsWith ('?help')){
+        const Em = new MessageEmbed()
+        .setTitle(`Příkazy k CA-RP botovi`)
+        .addFields(
+            {name: `!kostka`, value: `Minihra` },
+            {name: `!penis`, value: 'Změř si svého macka ;)' },
+        )
+        .setColor(0xCF3C1D)
+        .attachFiles(['rythm.png'])
+        .setThumbnail('attachment://rythm.png');
+        message.channel.send(Em);
+    }
+
+    if (message.content.includes ('!kostka')){
     bott =Math.floor(Math.random() * 6) + (1);
     ja=Math.floor(Math.random() * 6) + (1);
     if(ja>bott){
@@ -82,17 +95,6 @@ bot.on('message', async message => {
         .setThumbnail('attachment://gogo.png');
         message.channel.send(Em);
     }   
-    if (message.content.toLocaleLowerCase().includes ('ted')) {
-        const Em = new MessageEmbed()
-        .setTitle(`Neotravuj..`)
-        .addFields(
-            {name: `Tedík`, value: `Zrovna nahání po městě lupiče.. a nemá čas..` },
-        )
-        .setColor(0xFF00EC)
-        .attachFiles(['ted.png'])
-        .setThumbnail('attachment://ted.png');
-        message.channel.send(Em);
-    } 
     if (message.content.toLocaleLowerCase().includes ('grogy')) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
@@ -142,13 +144,9 @@ bot.on('message', async message => {
         // Send the attachment in the message channel
         message.channel.send(attachment);
     }
-//NUDES
-    if(message.content.startsWith ('!nudes')){
-        const nudes = new MessageAttachment('https://fapdungeon.com/wp-content/uploads/2020/06/1-sgh9JIW.jpg');
-        message.channel.send(nudes);
-    }
+
 //RYTHM HELP
-    if(message.content.startsWith('!rythm')){
+    /*if(message.content.startsWith('!rythm')){
        // message.channel.send(`<@${message.author.id}> Jsi gay, nejsi?`);
             
         const Em = new MessageEmbed()
@@ -164,7 +162,7 @@ bot.on('message', async message => {
         .attachFiles(['rythm.png'])
         .setThumbnail('attachment://rythm.png');
         message.channel.send(Em);
-    }
+    }*/
 //SPAM 
     //if(message.channel.type){
     //if(Message.content.send){
