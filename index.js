@@ -105,7 +105,7 @@ bot.on('message', async message => {
         .setThumbnail('attachment://arnold.png');
         message.channel.send(Em);
     }
-    if (message.content.toLocaleLowerCase().includes (`<@${message.author.id('267413057595113473')}>`)) {
+    if (message.content.toLocaleLowerCase().includes (`<@${message.client.id('267413057595113473')}>`)) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
         .addFields(
