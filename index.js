@@ -39,7 +39,7 @@ bot.on('message', async message => {
     bad = ['píči','piča', 'kokot', 'píča','debil','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak'];
     if (bad.indexOf(message.content) >= 0) {
         message.react('🤬');
-        message.react('827604741118623824');
+        message.react('827604658729517076');
     }
     if (message.content.includes ('gay')){
         message.channel.send(`Sám jsi ;)`);
