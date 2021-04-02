@@ -82,6 +82,7 @@ bot.on('message', async message => {
         }
     }
 //AKTIVITA
+//
     if (message.content.toLocaleLowerCase().includes ('gogo')) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
@@ -93,6 +94,17 @@ bot.on('message', async message => {
         .setThumbnail('attachment://gogo.png');
         message.channel.send(Em);
     }   
+    if (message.content.toLocaleLowerCase().includes ('arnoldko')) {
+        const Em = new MessageEmbed()
+        .setTitle(`Neotravuj..`)
+        .addFields(
+            {name: `Arnoldko`, value: `Je neustále offline.. a nepomůže ti ;)` },
+        )
+        .setColor(0x000000)
+        .attachFiles(['arnold.png'])
+        .setThumbnail('attachment://arnold.png');
+        message.channel.send(Em);
+    }
     if (message.content.toLocaleLowerCase().includes ('grogy')) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
