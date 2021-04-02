@@ -7,7 +7,7 @@ bot.once('ready', () => {
 
 bot.on('message', async message => {
 //NASTAVENÍ
-    bot.user.setActivity('co meleš..', { type: 'LISTENING' });
+    bot.user.setActivity('/help', { type: 'LISTENING' });
 
 //PENIS    
     if (message.content.includes ('!penis')){
@@ -46,7 +46,7 @@ bot.on('message', async message => {
 
 //CARP
 //KOSTKA
-    if (message.content.startsWith ('?help')){
+    if (message.content.startsWith ('/help')){
         const Em = new MessageEmbed()
         .setTitle(`Příkazy k CA-RP botovi`)
         .addFields(
