@@ -18,7 +18,7 @@ bot.on('message', async message => {
         message.react('827604658729517076');
     }
 //Addons Reaction
-    if(message.channel(addonschannel).content.send){
+    if(addonschannel.content.send){
         message.channel.send('Ahoj');
     }
 //PREFIX
