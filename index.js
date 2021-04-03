@@ -15,9 +15,7 @@ bot.on('message', async message => {
         message.react('827604658729517076');
     }
 //PREFIX
-    if(!message.content.startsWith(prefix) || message.author.bot ||message.content.toLocaleLowerCase().includes ('master')||message.content.toLocaleLowerCase().includes ('mastre')||
-    message.content.toLocaleLowerCase().includes ('mastr')||message.content.toLocaleLowerCase().includes ('grogy')||message.content.toLocaleLowerCase().includes ('arnoldko')||
-    message.content.toLocaleLowerCase().includes ('gogo')) return;
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 //PING    
