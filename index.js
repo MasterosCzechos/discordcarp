@@ -1,10 +1,12 @@
 const { Client, Message, MessageEmbed, MessageMentions, MessageAttachment,} = require('discord.js');
 const bot = new Client();
-const prefix = '_';
-const addonschannel = bot.channels.find(channel => channel.id === '823099971226173470');
+
 bot.once('ready', () => {
     console.log("Je ready");
 });
+
+const prefix = '_';
+const addonschannel = bot.channels.cache.find(channel => channel.id === '823099971226173470');
 
 bot.on('message', async message => {
 //NASTAVENÍ
