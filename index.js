@@ -20,7 +20,8 @@ bot.on('message', async message => {
 //Addons Reaction
     if(message.channel.id==='827563554957557770'){
         if(message.channel.type){
-            
+            message.react('800824737910620160');
+            message.react('800825887464488961');
         }
     }
 //PREFIX
