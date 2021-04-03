@@ -6,7 +6,7 @@ bot.once('ready', () => {
 });
 
 const prefix = '_';
-const addonschannel = bot.channels.cache.find(channel => channel.id === '823099971226173470');
+//const addonschannel = bot.channels.cache.find(channel => channel.id === '823099971226173470');
 
 bot.on('message', async message => {
 //NASTAVENÍ
@@ -18,8 +18,10 @@ bot.on('message', async message => {
         message.react('827604658729517076');
     }
 //Addons Reaction
-    if(addonschannel.message.channel.type()){
-        message.channel.send('Ahoj');
+    if(message.channel.id==='827563554957557770'){
+        if(message.channel.type){
+            message.channel.send('Ahoj');
+        }
     }
 //PREFIX
     if(!message.content.startsWith(prefix) || message.author.bot) return;
