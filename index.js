@@ -7,9 +7,17 @@ bot.once('ready', () => {
 
 bot.on('message', async message => {
 //NASTAVENÍ
-    bot.user.setActivity('!helpme', { type: 'LISTENING' });
+    bot.user.setActivity('_help', { type: 'LISTENING' });
+//REACTION ON BAD WORD
+    bad = ['píčo','pičo','pico','píči','piča', 'kokot','kokote','píča','debil','debile','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','kretene','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak','curaku','čůráku'];
+    if (bad.indexOf(message.content) >= 0) {
+        message.react('🤬');
+        message.react('827604658729517076');
+    }
 //PREFIX
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.startsWith(prefix) || message.author.bot ||message.content.toLocaleLowerCase().includes ('master')||message.content.toLocaleLowerCase().includes ('mastre')||
+    message.content.toLocaleLowerCase().includes ('mastr')||message.content.toLocaleLowerCase().includes ('grogy')||message.content.toLocaleLowerCase().includes ('arnoldko')||
+    message.content.toLocaleLowerCase().includes ('gogo')) return
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 //PING    
@@ -42,16 +50,8 @@ bot.on('message', async message => {
             message.channel.send(Em);
         }
     }
-//REACTION ON BAD WORD
-    bad = ['píčo','pičo','pico','píči','piča', 'kokot','kokote','píča','debil','debile','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','kretene','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak','curaku','čůráku'];
-    if (bad.indexOf(message.content) >= 0) {
-        message.react('🤬');
-        message.react('827604658729517076');
-    }
-    
-//CARP
-//KOSTKA
-    if (message.content.startsWith ('!helpme')){
+//HELP
+    if (command=== 'help'){
         const Em = new MessageEmbed()
         .setTitle(`Příkazy k CA-RP botovi`)
         .addFields(
@@ -63,8 +63,8 @@ bot.on('message', async message => {
         .setThumbnail('attachment://carp-logo.png');
         message.channel.send(Em);
     }
-
-    if (message.content.includes ('!kostka')){
+//KOSTKA
+    if (command=== 'kostka'){
     bott =Math.floor(Math.random() * 6) + (1);
     ja=Math.floor(Math.random() * 6) + (1);
     if(ja>bott){
@@ -89,7 +89,6 @@ bot.on('message', async message => {
         }
     }
 //AKTIVITA
-//
     if (message.content.toLocaleLowerCase().includes ('gogo')) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
@@ -112,7 +111,7 @@ bot.on('message', async message => {
         .setThumbnail('attachment://arnold.png');
         message.channel.send(Em);
     }
-    /*if (message.content.toLocaleLowerCase().includes (`<@${message.member.id('267413057595113473')}>`)) {
+/*  if (message.content.toLocaleLowerCase().includes (`<@${message.member.id('267413057595113473')}>`)) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
         .addFields(
@@ -144,53 +143,68 @@ bot.on('message', async message => {
         .attachFiles(['master.png'])
         .setThumbnail('attachment://master.png');
         message.channel.send(Em);
-    }     
-//BOT JOIN
-    if (!message.guild) return;
-
-    if (message.content.includes ('!joiin')) {
-    // Only try to join the sender's voice channel if they are in one themselves
-    if (message.member.voice.channel) {
-      const connection = await message.member.voice.channel.join();
-    }   else {
-        message.reply('You need to join a voice channel first!');
-        }
     }
-//BOT LEAVE
-    if (message.content.includes ('!leavee')) {
-        // Only try to join the sender's voice channel if they are in one themselves
-        if (message.member.voice.channel) {
-          const connection = await message.member.voice.channel.leave();
-        }   else {
-            message.reply('Bot is not join in a voice channel!');
-            }
-    }
-//RIP
-    if (message.content.startsWith ('!rip')) {
-        // Create the attachment using MessageAttachment
-        const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
-        message.channel.send(attachment);
-    }
-
-//RYTHM HELP
-    /*if(message.content.startsWith('!rythm')){
-       // message.channel.send(`<@${message.author.id}> Jsi gay, nejsi?`);
-            
+//AKTIVITA
+    if (message.content.toLocaleLowerCase().includes ('gogo')) {
         const Em = new MessageEmbed()
-        .setTitle(`Příkazy k Rythm botovi`)
+        .setTitle(`Neotravuj..`)
         .addFields(
-            {name: `!p [Jméno - URL]`, value: `Přehraje skladbu s daným jménem nebo URL adresou` },
-            {name: `!leave`, value: 'Odpojí bota z room ve které se aktuálně nachází' },
-            {name: `!skip`, value: `Přeskočí písničku, která právě hraje` },
-            {name: `!np`, value: `Zobrazí informace o aktuální písničce` },
-            {name: `!pause`, value: `Stopne aktuálně puštěnou písničku` },
+            {name: `Gogoušek`, value: `Je zaneprázdněn.. a nebo spí ;)` },
         )
-        .setColor(0xCF3C1D)
-        .attachFiles(['rythm.png'])
-        .setThumbnail('attachment://rythm.png');
+        .setColor(0x0027FF)
+        .attachFiles(['gogo.png'])
+        .setThumbnail('attachment://gogo.png');
+        message.channel.send(Em);
+    }   
+    if (message.content.toLocaleLowerCase().includes ('arnoldko')) {
+        const Em = new MessageEmbed()
+        .setTitle(`Neotravuj..`)
+        .addFields(
+            {name: `Arnoldko`, value: `Je neustále offline.. a nepomůže ti ;)` },
+        )
+        .setColor(0x000000)
+        .attachFiles(['arnold.png'])
+        .setThumbnail('attachment://arnold.png');
+        message.channel.send(Em);
+    }
+/*  if (message.content.toLocaleLowerCase().includes (`<@${message.member.id('267413057595113473')}>`)) {
+        const Em = new MessageEmbed()
+        .setTitle(`Neotravuj..`)
+        .addFields(
+            {name: `Tedík`, value: `Neotravuj má dost práce.. CSGO je hard hra ;)` },
+        )
+        .setColor(0x000000)
+        .attachFiles(['ted.png'])
+        .setThumbnail('attachment://ted.png');
         message.channel.send(Em);
     }*/
+    if (message.content.toLocaleLowerCase().includes ('grogy')) {
+        const Em = new MessageEmbed()
+        .setTitle(`Neotravuj..`)
+        .addFields(
+            {name: `Grogouš`, value: `Upravuje ti server.. tak ho nezdržuj..` },
+        )
+        .setColor(0xFFCD00)
+        .attachFiles(['grogy.png'])
+        .setThumbnail('attachment://grogy.png');
+        message.channel.send(Em);
+    }
+    if (message.content.toLocaleLowerCase().includes ('master')||message.content.toLocaleLowerCase().includes ('mastre')||message.content.toLocaleLowerCase().includes ('mastr')) {
+        const Em = new MessageEmbed()
+        .setTitle(`Neotravuj..`)
+        .addFields(
+            {name: `Masterko`, value: `Neotravuj zbytečně.. zrovna prozkoumává temnou stranu světa..` },
+        )
+        .setColor(0x000000)
+        .attachFiles(['master.png'])
+        .setThumbnail('attachment://master.png');
+        message.channel.send(Em);
+    }
+//RIP
+    if (command==='rip') {
+        const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
+        message.channel.send(attachment);
+    }
 //SPAM 
     //if(message.channel.type){
     //if(Message.content.send){
@@ -198,6 +212,5 @@ bot.on('message', async message => {
         //message.channel.send(`<@${message.author.id}> Jsi gay, nejsi?`);
         //message.reply(message.author.displayAvatarURL());
     //}
-});  
-
+}); 
 bot.login(process.env.token);
