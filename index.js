@@ -20,7 +20,7 @@ bot.on('message', async message => {
 //Addons Reaction
     if(message.channel.id==='827563554957557770'){
         if(message.channel.type){
-            message.channel.send('Ahoj');
+            
         }
     }
 //PREFIX
