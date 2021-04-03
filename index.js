@@ -12,13 +12,13 @@ bot.on('message', async message => {
 //NASTAVENÍ
     bot.user.setActivity('_help', { type: 'LISTENING' });
 //REACTION ON BAD WORD
-    bad = ['píčo','pičo','pico','píči','piča', 'kokot','kokote','píča','debil','debile','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','kretene','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak','curaku','čůráku'];
+    bad = ['píčo','pičo','pico','píči','piči','piča', 'kokot','kokote','píča','debil','debile','fuck','fuk','f*ck','pí*a','pi*a','kretén','kreten','kretene','pičus','pixi','mrdka','kunda','kurva','čůrák','čurak','curak','curaku','čůráku'];
     if (bad.indexOf(message.content) >= 0) {
         message.react('🤬');
         message.react('827604658729517076');
     }
 //Addons Reaction
-    if(message.channel.id==='823099971226173470'){
+    if(message.channel.id==='823099971226173470'||message.channel.id==='800742696322596865'||message.channel.id==='802353958936903720'){
         if(message.channel.type){
             message.react('800824737910620160');
             message.react('800825887464488961');
