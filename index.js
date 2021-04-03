@@ -1,6 +1,7 @@
 const { Client, Message, MessageEmbed, MessageMentions, MessageAttachment,} = require('discord.js');
 const bot = new Client();
 const prefix = '_';
+const addonschannel = bot.channels.find(channel => channel.id === '823099971226173470');
 bot.once('ready', () => {
     console.log("Je ready");
 });
@@ -13,6 +14,10 @@ bot.on('message', async message => {
     if (bad.indexOf(message.content) >= 0) {
         message.react('🤬');
         message.react('827604658729517076');
+    }
+//Addons Reaction
+    if(message.channel(addonschannel).content.send){
+        message.channel.send('Ahoj');
     }
 //PREFIX
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -98,63 +103,7 @@ bot.on('message', async message => {
         .setThumbnail('attachment://gogo.png');
         message.channel.send(Em);
     }   
-    if (message.content.toLocaleLowerCase().includes ('arnoldko')) {
-        const Em = new MessageEmbed()
-        .setTitle(`Neotravuj..`)
-        .addFields(
-            {name: `Arnoldko`, value: `Je neustále offline.. a nepomůže ti ;)` },
-        )
-        .setColor(0x000000)
-        .attachFiles(['arnold.png'])
-        .setThumbnail('attachment://arnold.png');
-        message.channel.send(Em);
-    }
-/*  if (message.content.toLocaleLowerCase().includes (`<@${message.member.id('267413057595113473')}>`)) {
-        const Em = new MessageEmbed()
-        .setTitle(`Neotravuj..`)
-        .addFields(
-            {name: `Tedík`, value: `Neotravuj má dost práce.. CSGO je hard hra ;)` },
-        )
-        .setColor(0x000000)
-        .attachFiles(['ted.png'])
-        .setThumbnail('attachment://ted.png');
-        message.channel.send(Em);
-    }*/
-    if (message.content.toLocaleLowerCase().includes ('grogy')) {
-        const Em = new MessageEmbed()
-        .setTitle(`Neotravuj..`)
-        .addFields(
-            {name: `Grogouš`, value: `Upravuje ti server.. tak ho nezdržuj..` },
-        )
-        .setColor(0xFFCD00)
-        .attachFiles(['grogy.png'])
-        .setThumbnail('attachment://grogy.png');
-        message.channel.send(Em);
-    }
-    if (message.content.toLocaleLowerCase().includes ('master')||message.content.toLocaleLowerCase().includes ('mastre')||message.content.toLocaleLowerCase().includes ('mastr')) {
-        const Em = new MessageEmbed()
-        .setTitle(`Neotravuj..`)
-        .addFields(
-            {name: `Masterko`, value: `Neotravuj zbytečně.. zrovna prozkoumává temnou stranu světa..` },
-        )
-        .setColor(0x000000)
-        .attachFiles(['master.png'])
-        .setThumbnail('attachment://master.png');
-        message.channel.send(Em);
-    }
-//AKTIVITA
-    if (message.content.toLocaleLowerCase().includes ('gogo')) {
-        const Em = new MessageEmbed()
-        .setTitle(`Neotravuj..`)
-        .addFields(
-            {name: `Gogoušek`, value: `Je zaneprázdněn.. a nebo spí ;)` },
-        )
-        .setColor(0x0027FF)
-        .attachFiles(['gogo.png'])
-        .setThumbnail('attachment://gogo.png');
-        message.channel.send(Em);
-    }   
-    if (message.content.toLocaleLowerCase().includes ('arnoldko')) {
+    if (message.content.toLocaleLowerCase().includes ('arnold')) {
         const Em = new MessageEmbed()
         .setTitle(`Neotravuj..`)
         .addFields(
