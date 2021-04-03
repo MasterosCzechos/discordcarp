@@ -17,7 +17,7 @@ bot.on('message', async message => {
 //PREFIX
     if(!message.content.startsWith(prefix) || message.author.bot ||message.content.toLocaleLowerCase().includes ('master')||message.content.toLocaleLowerCase().includes ('mastre')||
     message.content.toLocaleLowerCase().includes ('mastr')||message.content.toLocaleLowerCase().includes ('grogy')||message.content.toLocaleLowerCase().includes ('arnoldko')||
-    message.content.toLocaleLowerCase().includes ('gogo')) return
+    message.content.toLocaleLowerCase().includes ('gogo')) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 //PING    
@@ -55,8 +55,8 @@ bot.on('message', async message => {
         const Em = new MessageEmbed()
         .setTitle(`Příkazy k CA-RP botovi`)
         .addFields(
-            {name: `!kostka`, value: `Minihra` },
-            {name: `!penis`, value: 'Změř si svého macka ;)' },
+            {name: `_kostka`, value: `Minihra` },
+            {name: `_penis`, value: 'Změř si svého macka ;)' },
         )
         .setColor(0xCF3C1D)
         .attachFiles(['carp-logo.png'])
