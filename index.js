@@ -19,7 +19,7 @@ bot.on('message', async message => {
     }
 
 //PENIS    
-    if (message.content.includes ('!penis')){
+    if (command=== ('penis')){
         j=Math.floor(Math.random() * 29) + (4);
         if(j<=8){
         const Em = new MessageEmbed()
