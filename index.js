@@ -28,6 +28,10 @@ bot.on('message', async message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
+//IP
+    if(command === 'ip'){
+        message.channel.send(`<@${message.author.id}> Veškeré potřebné IP adresy najdeš v místnosti ${message.channel.id('827567278613725194')}`)
+    }
 //PING    
     if(command==='ping'){
         message.channel.send('pong!');
