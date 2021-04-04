@@ -30,7 +30,7 @@ bot.on('message', async message => {
     const command = args.shift().toLowerCase();
 //IP
     if(command === 'ip'){
-        message.channel.send(`<@${message.author.id}> Veškeré potřebné IP adresy najdeš v místnosti ${message.channel.name==='827567278613725194'}`);
+        message.channel.send(`<@${message.author.id}> Veškeré potřebné IP adresy najdeš v místnosti ${message.channel.name('827567278613725194')}`);
     }
 //PING    
     if(command==='ping'){
