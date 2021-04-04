@@ -6,7 +6,7 @@ bot.once('ready', () => {
 });
 
 const prefix = '_';
-//const addonschannel = bot.channels.cache.find(channel => channel.id === '823099971226173470');
+//const addonschannel = bot.channels.cache.find(channel => channel.id === '827567278613725194');
 
 bot.on('message', async message => {
 //NASTAVENÍ
@@ -30,7 +30,7 @@ bot.on('message', async message => {
     const command = args.shift().toLowerCase();
 //IP
     if(command === 'ip'){
-        message.channel.send(`<@${message.author.id}> Veškeré potřebné IP adresy najdeš v místnosti ${message.channel.name('827567278613725194')}`);
+        message.channel.send(`<@${message.author.id}> Veškeré potřebné IP adresy najdeš v místnosti ${bot.channels.cache.find(channel => channel.id === '827567278613725194')}`);
     }
 //PING    
     if(command==='ping'){
