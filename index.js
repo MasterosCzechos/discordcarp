@@ -69,6 +69,7 @@ bot.on('message', async message => {
         .addFields(
             {name: `_kostka`, value: `Minihra` },
             {name: `_penis`, value: 'Změř si svého macka ;)' },
+            {name: `_ip`, value: 'Ukáže ti, kde najít veškeré IP adresy.' },
         )
         .setColor(0xCF3C1D)
         .attachFiles(['carp-logo.png'])
