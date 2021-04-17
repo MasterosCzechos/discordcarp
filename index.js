@@ -62,6 +62,40 @@ bot.on('message', async message => {
             message.channel.send(Em);
         }
     }
+//ALKOHOL    
+    if (command=== 'alkohol'){
+        j=Math.floor(Math.random() * 400) + (0);
+        j/=100;
+        if(j<=1){
+        const Em = new MessageEmbed()
+            .addFields(
+                {name: 'Je v pohodě..' ,value: `nemusíte o <@${message.author.id}> mít strach.. má jen ${j}‰..` },)
+            .setColor(0xFF8B00)
+            .setThumbnail('https://www.kudyznudy.cz/files/95/95b78b24-b3aa-4bb2-bfda-8b746a03ecaa.jpg?v=20200827022055')
+            message.channel.send(Em);
+        }else if(j<=2){
+            const Em = new MessageEmbed()
+            .addFields(
+                {name: 'Začíná to být zajímavé..' ,value: `<@${message.author.id}> už to začíná dosti pociťovat.. má ${j}‰..` },)
+            .setColor(0x4F1900)
+            .setThumbnail('https://www.zboziaprodej.cz/wp-content/uploads/2020/03/bozkov_packshot.jpg')
+            message.channel.send(Em);
+        }else if(j<=3){
+            const Em = new MessageEmbed()
+            .addFields(
+                {name: 'Už je to zlé..' ,value: `<@${message.author.id}> už má dost.. má ${j}‰..` },)
+            .setColor(0xEDBB99)
+            .setThumbnail('https://manboxeo.cz/media/thumbs/product-full/product-photos/16198.55623.jpg')
+            message.channel.send(Em);
+        }else if(j<=4){
+            const Em = new MessageEmbed()
+            .addFields(
+                {name: 'Je konec..' ,value: `<@${message.author.id}> už se nevrátí mezi nás :(.. jeho konečná hodnota byla ${j}‰..` },)
+            .setColor(0x000000)
+            .setThumbnail('https://www.global-wines.cz/data/images/w900h1320/7/5077.png')
+            message.channel.send(Em);
+        }
+    }
 //HELP
     if (command=== 'help'){
         const Em = new MessageEmbed()
