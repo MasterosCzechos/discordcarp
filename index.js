@@ -90,7 +90,7 @@ bot.on('message', async message => {
         }else if(j<=4){
             const Em = new MessageEmbed()
             .addFields(
-                {name: 'Je konec..' ,value: `<@${message.author.id}> už se nevrátí mezi nás :(.. jeho konečná hodnota byla ${j}‰..` },)
+                {name: 'Je konec..' ,value: `<@${message.author.id}> už se nevrátí mezi nás :( skončil na ${j}‰..` },)
             .setColor(0x000000)
             .setThumbnail('https://www.global-wines.cz/data/images/w900h1320/7/5077.png')
             message.channel.send(Em);
