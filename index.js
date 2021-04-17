@@ -104,6 +104,7 @@ bot.on('message', async message => {
             {name: `_kostka`, value: `Minihra` },
             {name: `_penis`, value: 'Změř si svého macka ;)' },
             {name: `_ip`, value: 'Ukáže ti, kde najít veškeré IP adresy.' },
+            {name: `_alkohol`, value: 'Zjisti, kolik by jsi nadýchal před policajty ;)' },
         )
         .setColor(0xCF3C1D)
         .attachFiles(['carp-logo.png'])
