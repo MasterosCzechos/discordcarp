@@ -56,7 +56,7 @@ bot.on('message', async message => {
         }else if(j<=28){
             const Em = new MessageEmbed()
             .addFields(
-                {name: 'Si peniiiis' ,value: `<@${message.author.id}> je zkurvený negr a má ${j} cm..` },)
+                {name: 'Si peniiiis' ,value: `<@${message.author.id}> má obřího macka.. a má ${j} cm..` },)
             .setColor(0xCF3C1D)
             .setThumbnail('https://www.darkyvbrne.cz/fotky64316/fotos/_vyr_1555_penis.jpg')
             message.channel.send(Em);
